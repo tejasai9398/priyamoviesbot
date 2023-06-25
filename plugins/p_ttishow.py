@@ -38,7 +38,7 @@ async def save_group(bot, message):
             return
         buttons = [[
             InlineKeyboardButton('𝐇𝐎𝐖 𝐓𝐎 𝐔𝐒𝐄 𝐌𝐄', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 📢', url='https://t.me/Sunrises_Bot_discussion_Group')
+            InlineKeyboardButton('📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 📢', url='https://t.me/PriyaBotUpdates')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -57,8 +57,8 @@ async def save_group(bot, message):
                         pass
                 temp.MELCOW['welcome'] = await message.reply_video(
                 video="https://telegra.ph/file/03691465baa774e46506d.mp4",                                               
-                                                 caption=f'<b>ʜᴇʏ, {u.mention} 👋🏻\nᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴏᴜʀ ɢʀᴏᴜᴘ {message.chat.title}\n\nʏᴏᴜ ᴄᴀɴ ꜰɪɴᴅ ᴍᴏᴠɪᴇꜱ / ꜱᴇʀɪᴇꜱ. ꜰʀᴏᴍ ʜᴇʀᴇ. ᴇɴᴊᴏʏ😉.\n\n<b>┏≫ ғᴏʟʟᴏᴡ ɢʀᴏᴜᴘ ʀᴜʟᴇs</b>\n┣ <b>ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ›› @sunriseseditsoffical6</b></code>\n<b>┗≫ ғᴏʟʟᴏᴡ ɢʀᴏᴜᴘ ʀᴜʟᴇs</b>',
-                                                 reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('➡️ɢʀᴏᴜᴘ ʀᴜʟᴇs⬅️', url='https://t.me/Sunrises_Bot_discussion_Group/140') ] ] )
+                                                 caption=f'<b>ʜᴇʏ, {u.mention} 👋🏻\nᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴏᴜʀ ɢʀᴏᴜᴘ {message.chat.title}\n\nʏᴏᴜ ᴄᴀɴ ꜰɪɴᴅ ᴍᴏᴠɪᴇꜱ / ꜱᴇʀɪᴇꜱ. ꜰʀᴏᴍ ʜᴇʀᴇ. ᴇɴᴊᴏʏ😉.\n\n<b>┏≫ ғᴏʟʟᴏᴡ ɢʀᴏᴜᴘ ʀᴜʟᴇs</b>\n┣ <b>ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ›› @PriyaMovies_Group</b></code>\n<b>┗≫ ғᴏʟʟᴏᴡ ɢʀᴏᴜᴘ ʀᴜʟᴇs</b>',
+                                                 reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('➡️ɢʀᴏᴜᴘ ʀᴜʟᴇs⬅️', url='https://t.me/PriyaBotUpdates/73') ] ] )
                 )
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
@@ -176,7 +176,7 @@ async def gen_invite(bot, message):
 
 @Client.on_message(filters.command('ban') & filters.user(ADMINS))
 async def ban_a_user(bot, message):
-    # https://t.me/GetTGLink/4185
+    # https://t.me/PriyaBotUpdates/73
     if len(message.command) == 1:
         return await message.reply('Give me a user id / username')
     r = message.text.split(None)
@@ -243,7 +243,7 @@ async def unban_a_user(bot, message):
     
 @Client.on_message(filters.command('users') & filters.user(ADMINS))
 async def list_users(bot, message):
-    # https://t.me/GetTGLink/4184
+    # https://t.me/PriyaBotUpdates/73
     raju = await message.reply('Getting List Of Users')
     users = await db.get_all_users()
     out = "Users Saved In DB Are:\n\n"
